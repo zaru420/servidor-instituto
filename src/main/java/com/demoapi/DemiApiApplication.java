@@ -12,5 +12,4 @@ public class DemiApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemiApiApplication.class, args);
 	}
-
 }
