@@ -40,11 +40,11 @@ public class AsignaturasController {
 	
 	/**
 	 * Crear
-	 * @param tipoUsuario
+	 * @param tipoAsignatura
 	 * @return
 	 */
 	@PostMapping("/asignaturas")
-	public Asignaturas createUsuario(@RequestBody Asignaturas asignaturas) {
+	public Asignaturas createAsignaturas(@RequestBody Asignaturas asignaturas) {
 		return repository.save(asignaturas);
 	}
 	
