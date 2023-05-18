@@ -39,7 +39,7 @@ public class UsuarioController {
 	
 	/**
 	 * Crear
-	 * @param tipoUsuario
+	 * @param Usuario
 	 * @return
 	 */
 	@PostMapping("/usuario")
