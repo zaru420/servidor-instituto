@@ -15,6 +15,28 @@ import jakarta.persistence.Table;
 @EntityListeners(AuditingEntityListener.class)
 public class Asignaturas {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(name = "idProfesor1")
+	private Integer idProfesor1;
+	
+	@Column(name = "idProfesor2")
+	private Integer idProfesor2;
+	
+	@Column(name = "nombre")
+	private String nombre;
+
+	public Asignaturas(Long id, Integer idProfesor1, Integer idProfesor2, String nombre) {
+		super();
+		this.id = id;
+		this.idProfesor1 = idProfesor1;
+		this.idProfesor2 = idProfesor2;
+		this.nombre = nombre;
+	}
+	
+	public Asignaturas() {}
 
 	/**
 	 * @return the id
@@ -72,28 +94,9 @@ public class Asignaturas {
 		this.nombre = nombre;
 	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@Column(name = "idProfesor1")
-	private Integer idProfesor1;
-	
-	@Column(name = "idProfesor2")
-	private Integer idProfesor2;
-	
-	@Column(name = "nombre")
-	private String nombre;
 
-	public Asignaturas(Long id, Integer idProfesor1, Integer idProfesor2, String nombre) {
-		super();
-		this.id = id;
-		this.idProfesor1 = idProfesor1;
-		this.idProfesor2 = idProfesor2;
-		this.nombre = nombre;
-	}
 
-	public Asignaturas() {}
+
 	
 	@Override
 	public String toString() {

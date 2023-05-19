@@ -8,12 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.demoapi.model.Cursos;
 
 
-public interface CursosRepository {
-
-
 @Repository
-public interface cursosRepository extends JpaRepository<Cursos, Long>{
+public interface CursosRepository extends JpaRepository<Cursos, Long>{
 
 	List<Cursos> findByNombre(@Param("nombre") String nombre);
-}
 }

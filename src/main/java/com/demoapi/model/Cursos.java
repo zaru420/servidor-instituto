@@ -72,6 +72,8 @@ public class Cursos {
 		this.nombre = nombre;
 	}
 	
+	public Cursos() {}
+	
 	/**
 	 * @return the id
 	 */
