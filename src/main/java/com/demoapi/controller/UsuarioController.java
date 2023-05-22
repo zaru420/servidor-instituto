@@ -175,6 +175,7 @@ public class UsuarioController {
 	@PostMapping("/usuario/logout")
 	public void logout(@RequestBody Usuario usuario) {
 		try {
+			System.out.println(usuario);
 			// Obtener el usuario de la base de datos por el nombre de usuario
 			Usuario usuarioExistente = repository.findByUsuario(usuario.getUsuario())
 					// Si no lo encuentra, lanza un error de usuario no encontrado
