@@ -30,8 +30,8 @@ public class Usuario {
 	@Column(name = "usuario") 
 	private String usuario;
 	
-	@Column(name = "contraseña") 
-	private String contraseña;
+	@Column(name = "contrasena") 
+	private String contrasena;
 	
 	@Column(name = "foto")
 	private String foto;
@@ -54,14 +54,14 @@ public class Usuario {
 	 * @param nombre
 	 * @param apellidos
 	 * @param usuario
-	 * @param contraseña
+	 * @param contrasena
 	 * @param foto
 	 * @param direccion
 	 * @param telefono
 	 * @param tipo_usuario
 	 * @param activo
 	 */
-	public Usuario(Long id, String dni, String nombre, String apellidos, String usuario, String contraseña, String foto,
+	public Usuario(Long id, String dni, String nombre, String apellidos, String usuario, String contrasena, String foto,
 			String direccion, String telefono, Integer tipoUsuario, Short activo) {
 		super();
 		this.id = id;
@@ -69,7 +69,7 @@ public class Usuario {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.usuario = usuario;
-		this.contraseña = contraseña;
+		this.contrasena = contrasena;
 		this.foto = foto;
 		this.direccion = direccion;
 		this.telefono = telefono;
@@ -119,12 +119,12 @@ public class Usuario {
 		this.usuario = usuario;
 	}
 
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 
 	public String getFoto() {
@@ -163,14 +163,14 @@ public class Usuario {
 		return activo;
 	}
 
-	public void setActivo(Short activo) {
-		this.activo = activo;
+	public void setActivo(int  activo) {
+		this.activo = (short) activo;
 	}
 
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", DNI=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", usuario="
-				+ usuario + ", contraseña=" + contraseña + ", foto=" + foto + ", direccion=" + direccion + ", telefono="
+				+ usuario + ", contraseña=" + contrasena + ", foto=" + foto + ", direccion=" + direccion + ", telefono="
 				+ telefono + ", tipoUsuario=" + tipoUsuario + ", activo=" + activo + "]";
 	}
 
