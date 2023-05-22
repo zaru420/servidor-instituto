@@ -22,9 +22,9 @@ public class NotasController {
 	@Autowired
 	private NotasRepository repository;
 	
-	@GetMapping("/notas/{nombre}")
-	public List<Notas> findByNombre(@PathVariable("nombre") String nombre) {
-		return repository.findByNombre(nombre);
+	@GetMapping("/notas/{id}")
+	public List<Notas> findByNombre(@PathVariable("id") int id) {
+		return repository.findById(id);
 	}
 	
 	/**
